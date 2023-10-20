@@ -1,0 +1,55 @@
+List the date when you went through the Git Lab Tutorials.: 10/19/2023
+Lisst the dates when you setup the GitHub Account.  If this was some time ago a rough estimate will do.:10/1/2022
+
+1. Paste the console output you saved at the end of step 3.C
+$ git status
+On branch master
+Your branch is up to date with 'origin/master'.
+
+nothing to commit, working tree clean
+
+2. How many commits have been done to the repository (not only by you, but by anyone) so far? Write the git command you used to get this information
+Command: git rev-list --all --count
+Answer: 9
+
+3. When was the README.md file modified last? Write the git command you used to get this information
+Command: git log -1 --format="%ad" -- README.md
+Answer: Fri Oct 20 00:15:00 2023 -0400
+	Wed Sep 25 18:33:08 2019 -0400
+
+4. Mention two reasons why branches are used in a Git repository
+	- Branches are used to develop features isolated from each other.
+	- Branches allow multiple team members to work simultaneously on different tasks.
+
+5. What is the difference between git log and git status?
+	- 'git log' shows the commit logs/history of the repository.
+	- 'git status' shows the status of changes as untracked, modified, or staged.
+
+6. What command would you use to see the commits where “Vehicle.h” was one of the committed files?
+Command: git log --all -- Vehicle.h
+
+7. What command would you use to see the commits whose commit message contains the word “file”?
+Command: git log --grep="file"
+
+8. In the context of object-oriented programming:
+	- What is inheritance?
+Inheritance is a mechanism where a new class inherits properties and behavior (methods) from another class.
+
+	- What is polymorphism?
+Polymorphism allows methods to do different things based on the context or the object they are acting upon.
+
+	- What is encapsulation?
+Encapsulation is the practice of keeping fields within a class private, then providing access to them via public methods. It's a protective barrier that keeps the data safe within the object and prevents outside code from directly accessing it.
+
+9. What is the main difference between the “Dictator and Lieutenants” workflow and the “Integration manager” workflow?
+The key difference lies in how changes are managed and integrated into the main repository.
+
+"Dictator and Lieutenants": One central repository where everyone pulls from, but only the dictator can push to. Lieutenants manage and integrate changes from specific groups of developers, resolving conflicts before passing changes to the dictator.
+
+"Integration manager": Each developer has two repositories (public and private). They push to their own public repository and pull from the central repository. The integration manager resolves conflicts and integrates changes from developers' public repositories into the central repository.
+
+10. How would a team of 100 developers benefit from following the “Dictator and Lieutenants” workflow instead of the “Centralized” workflow?
+	- Scalability: The workload is distributed among multiple lieutenants, preventing bottlenecks and efficiently managing the large number of developers.
+	- Conflict Resolution: Lieutenants handle conflicts within their specific groups of developers, ensuring conflicts are resolved before reaching the dictator.
+	- Quality Control: Lieutenants perform quality checks on developers' changes, maintaining the quality of the code in the central repository.
+	- Faster Integration: Multiple lieutenants managing different groups of developers allows for quicker integration of changes compared to a single integration manager in the centralized workflow.
